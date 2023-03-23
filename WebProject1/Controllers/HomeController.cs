@@ -17,7 +17,7 @@ namespace WebProject1.Controllers
 
         public IActionResult About()
         {
-            ViewData["Message"] = "Your application description page.";
+            ViewData["Message"] = "Olá, Gamer. Somos a JGames!";
 
             return View();
         }
