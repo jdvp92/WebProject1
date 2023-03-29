@@ -24,7 +24,7 @@ namespace WebProject1.Controllers
 
         public IActionResult Contact()
         {
-            ViewData["Message"] = "Your contact page.";
+            ViewData["Message"] = "Fale com a gente!";
 
             return View();
         }
