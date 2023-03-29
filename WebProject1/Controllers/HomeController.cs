@@ -17,14 +17,14 @@ namespace WebProject1.Controllers
 
         public IActionResult About()
         {
-            ViewData["Message"] = "Olá, Gamer. Somos a JGames!";
+            ViewData["Message"] = "Hello, Gamer. We are the GamesPro";
 
             return View();
         }
 
         public IActionResult Contact()
         {
-            ViewData["Message"] = "Fale com a gente!";
+            ViewData["Message"] = "Talk to us";
 
             return View();
         }

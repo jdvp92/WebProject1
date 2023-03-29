@@ -1,15 +1,13 @@
-﻿@model IEnumerable<WebProject1.Models.Department>
+﻿@model IEnumerable<WebProject1.Models.Product>
 
 @{
-    ViewData["Title"] = "Departments";
+    ViewData["Title"] = "Index";
 }
 
 <h2>@ViewData["Title"]</h2>
 
 <p>
-      <a asp-action="Create">
-            <input type="submit" value="New Department" class="btn btn-default" />
-      </a>
+    <a asp-action="Create">New Product</a>
 </p>
 <table class="table">
     <thead>
