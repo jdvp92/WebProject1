@@ -13,10 +13,10 @@ namespace WebProject1.Data
             : base(options)
         {
         }
-
         public DbSet<WebProject1.Models.Department> Department { get; set; }
         public DbSet<Seller> Seller { get; set; }
         public DbSet<SalesRecord> SalesRecord { get; set; }
-        public DbSet<WebProject1.Models.Product> Product { get; set; }
+        public DbSet<Product> Product { get; set; }
+        
     }
 }
