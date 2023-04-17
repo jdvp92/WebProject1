@@ -9,7 +9,9 @@ namespace WebProject1.Models
 
         public int Id { get; set; }
         public string Name { get; set; }
-        public double BaseSalary { get; set; }      
+        public double BaseSalary { get; set; }
+        public int DepartmentId { get; set; }
+        public int ProductId { get; set; }
 
         public ICollection<SalesRecord> Sales = new List<SalesRecord>();
 
