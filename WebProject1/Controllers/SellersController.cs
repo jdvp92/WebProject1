@@ -1,21 +1,24 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using WebProject1.Data;
+using WebProject1.Services;
 
 namespace WebProject1.Controllers
 {
     public class SellersController : Controller
     {
 
-        private readonly WebProject1Context _context;
+        private readonly SellerService _sellerService;
 
-        public SellersController(WebProject1Context context)
+        public SellersController(SellerService sellerService) 
         {
-            _context = context;
+           _sellerService = sellerService;
         }
+
 
         public IActionResult Index()
         {
-            return View();
+            var list = _sellerService.FindAll();
+            return View(list);
         }
     }
 }

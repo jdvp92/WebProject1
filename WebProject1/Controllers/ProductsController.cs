@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using WebProject1.Data;
 using WebProject1.Models;
+using WebProject1.Services;
 
 namespace WebProject1.Controllers
 {
@@ -20,7 +21,7 @@ namespace WebProject1.Controllers
         }
 
         // GET: Products
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index()      
         {
             return View(await _context.Product.ToListAsync());
         }
