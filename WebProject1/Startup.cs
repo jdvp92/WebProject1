@@ -39,8 +39,7 @@ namespace WebProject1
             services.AddDbContext<WebProject1Context>(options =>
                         options.UseMySql(Configuration.GetConnectionString("WebProject1Context"), builder =>
                            builder.MigrationsAssembly("WebProject1")));
-            services.AddScoped<SeedingService>();     
-            
+            services.AddScoped<SeedingService>();                 
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
