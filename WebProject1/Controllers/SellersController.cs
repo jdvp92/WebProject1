@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using WebProject1.Data;
 using WebProject1.Services;
+using System;
+using WebProject1.Models;
 
 namespace WebProject1.Controllers
 {
@@ -9,9 +11,9 @@ namespace WebProject1.Controllers
 
         private readonly SellerService _sellerService;
 
-        public SellersController(SellerService sellerService) 
+        public SellersController(SellerService sellerService)
         {
-           _sellerService = sellerService;
+            _sellerService = sellerService;
         }
 
 
@@ -19,6 +21,20 @@ namespace WebProject1.Controllers
         {
             var list = _sellerService.FindAll();
             return View(list);
+        }
+
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Create(Seller seller)
+        {
+
+            _sellerService.Insert(seller);
+            return RedirectToAction(nameof(Index));
         }
     }
 }
