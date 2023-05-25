@@ -8,7 +8,7 @@ namespace WebProject1.Models
         public string Name { get; set; }
         public Department Department { get; set; }
         public SalesRecord Sales { get; set; }
-        public int Price { get; set; }
+        public double Price { get; set; }
         public string Details { get; set; }
 
         public Product()

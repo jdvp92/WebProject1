@@ -55,7 +55,7 @@ namespace WebProject1.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name")] Product product)
+        public async Task<IActionResult> Create([Bind("Id,Name,Department,Price")] Product product)
         {
             if (ModelState.IsValid)
             {
@@ -87,7 +87,7 @@ namespace WebProject1.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name")] Product product)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Department,Price")] Product product)
         {
             if (id != product.Id)
             {

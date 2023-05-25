@@ -40,7 +40,7 @@ namespace WebProject1.Data
             Seller s2 = new Seller(2, "Christian", 3000.0);
             Seller s3 = new Seller(3, "Rodrigo", 3000.0);
 
-            Product p1 = new Product(001, "Diablo IV", d1,230,"Detalhes do jogo");
+            Product p1 = new Product(001, "Diablo IV", d1,230,"detalhe do jogo");
             Product p2 = new Product(002, "The Last of Us Part I", d5,400,"detalhe do jogo");
             Product p3 = new Product(003, "FIFA 2023", d10, 400, "detalhe do jogo");
             Product p4 = new Product(004, "Horizon Forbidden West", d2, 400, "detalhe do jogo");
