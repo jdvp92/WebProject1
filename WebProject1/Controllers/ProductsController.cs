@@ -21,7 +21,7 @@ namespace WebProject1.Controllers
         }
 
         // GET: Products
-        public async Task<IActionResult> Index()      
+        public async Task<IActionResult> Index()
         {
             return View(await _context.Product.ToListAsync());
         }
@@ -79,6 +79,27 @@ namespace WebProject1.Controllers
             {
                 return NotFound();
             }
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var department = await _context.Product.FindAsync(id);
+            if (department == null)
+            {
+                return NotFound();
+            }
+
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var price = await _context.Product.FindAsync(id);
+            if (price == null)
+            {
+                return NotFound();
+            }
             return View(product);
         }
 
@@ -107,6 +128,7 @@ namespace WebProject1.Controllers
                     {
                         return NotFound();
                     }
+
                     else
                     {
                         throw;
